@@ -1,0 +1,26 @@
+<!--pages/connected/connected.wxml-->
+<view class="transceiver-frame ">
+    <!--Tx frame-->
+    <view class="tx-frame" style="width:{{sysinfo['windowWidth']}}px">
+        <!--发送提示-->
+        <view style="align-self:flex-start; padding:30px 0 0 30px; font-size:large; font-weight:700;"> TX </view>
+        <!--发送内容-->
+        <textarea class="tx-textarea" style="height:{{sysinfo['windowHeight']/4}}px; width:{{sysinfo['windowWidth']*3/4}}px;" bindconfirm="BindConfirm" value="{{sendtext}}" id="sendtext_id"></textarea>
+        <view style="display:flex; flex-direction:row; justify-content:center; box-sizing: border-box; width:100%; margin:10px 0px 0px 0px;">
+        <button plain="true" bindtap='WriteCommandWithoutResponse'>Send</button>     
+        <button plain="true" bindtap='ClearSendText'>Clear</button>
+        </view>
+    </view>
+
+    <!--Rx frame-->
+    <view class="rx-frame" style="width:{{sysinfo['windowWidth']}}px">
+        <!--接收提示-->
+        <view style="align-self:flex-start; padding:30px 0 0 30px; font-size:large; font-weight:700;"> RX </view>
+        <!--接收内容-->
+        <textarea class="rx-textarea" style="height:{{sysinfo['windowHeight']/4}}px; width:{{sysinfo['windowWidth']*3/4}}px;" value="{{rectext}}" disabled='true'></textarea>
+        <view style="display:flex; flex-direction:row; justify-content:center; box-sizing: border-box; width:100%; margin:10px 0px 0px 0px;">
+        <button plain="true" bindtap='EnableNotify'>{{tx_char_cccd}}</button>     
+        <button plain="true" bindtap='ClearRecText'>Clear</button>
+        </view>
+    </view>
+</view> 

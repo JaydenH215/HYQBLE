@@ -1,0 +1,15 @@
+{
+    "pages": [
+        "pages/scanning/scanning",
+        "pages/connected/connected"
+    ],
+    "window": {
+        "backgroundTextStyle": "light",
+        "navigationBarBackgroundColor": "#35353a",
+        "navigationBarTitleText": "HYQ_BLE",
+        "navigationBarTextStyle": "white",
+        "enablePullDownRefresh": true,
+        "debug": false
+
+    }
+}

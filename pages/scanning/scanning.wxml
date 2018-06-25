@@ -1,0 +1,20 @@
+<!--pages/scanning/scanning.wxml-->
+
+<!--循环创建BLE设备列表-->
+<view wx:if="{{devices_list.length > 0}}" class="BD-item-list" wx:for="{{devices_list}}" style="width:{{sysinfo['windowWidth']}}px;">
+    <!--设备节点边框-->
+    <view style="border:1px solid lightgray; border-style:none none solid none; width:{{sysinfo['windowWidth']}}px;">
+    <!--设备节点内容-->
+    <view class="BD-item" id="{{devices_list[index].deviceId}}" bindtap='ConnectToDevice'> 
+        <image style='width:40px;height:40px;padding:30px 15px 0px 10px' mode='aspectFit' src='/pages/scanning/BLE_pic.jpg'></image>
+        <view style='display:flex;flex-direction:column;'>
+            <text>Device Name :</text>
+            <text style='font-size:smaller; font-weight:200'>{{devices_list[index].name}}</text>
+            <text>BD Address/UUID :</text>
+            <text style='font-size:smaller; font-weight:200'>{{devices_list[index].deviceId}}</text>
+            <text>RSSI :</text>
+            <text style='font-size:smaller; font-weight:200'>{{devices_list[index].RSSI}}</text>
+        </view> 
+    </view>    
+    </view>
+</view>

@@ -1,0 +1,48 @@
+/* pages/connected/connected.wxss */
+.transceiver-frame {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+
+    box-sizing: border-box;
+}
+
+.tx-frame {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    
+    box-sizing: border-box;
+}
+
+.tx-textarea {
+    border-style: solid solid solid solid;
+    border-radius:20px;
+    word-break:break-all;
+    text-align:left;
+
+    box-sizing:border-box;
+    padding:5px 10px 5px 10px;
+}
+
+.rx-frame {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+
+    box-sizing: border-box;
+}
+
+.rx-textarea {
+
+    border-style: solid solid solid solid;
+    border-radius:20px;
+    word-break:break-all;
+    text-align:left;
+    
+    box-sizing:border-box;
+    padding:5px 10px 5px 10px;
+}
