@@ -1,5 +1,11 @@
 <!--pages/scanning/scanning.wxml-->
 
+<!--欢迎提醒页面-->
+<view wx:if="{{welcome_page == true}}"class="welcome" style="position:absolute; width:{{sysinfo['windowWidth']}}px; top:{{sysinfo['windowHeight']*1/2}}px;font-weight:300;font-size:small"> github.com/HJDonv/HYQBLE</view>
+
+<view wx:if="{{welcome_page == true}}"class="welcome" style="position:absolute; width:{{sysinfo['windowWidth']}}px; top:{{sysinfo['windowHeight']*2.5/6}}px"> Pull-down</view>
+
+
 <!--循环创建BLE设备列表-->
 <view wx:if="{{devices_list.length > 0}}" class="BD-item-list" wx:for="{{devices_list}}" style="width:{{sysinfo['windowWidth']}}px;">
     <!--设备节点边框-->

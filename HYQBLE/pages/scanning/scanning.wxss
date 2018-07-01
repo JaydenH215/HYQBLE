@@ -1,5 +1,11 @@
 /* pages/scanning/scanning.wxss */
 
+.welcome {
+    font-size: x-large;
+    font-weight: 700;
+    text-align:center;
+}
+
 .BD-item {
     display: flex;
     flex-direction: row;

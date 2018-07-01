@@ -79,7 +79,7 @@ Page({
         })
     },
 
-    //接收输入字符串
+    //确认输入字符串
     BindConfirm: function(event) {
         if (event.currentTarget.id == "sendtext_id") {
             this.setData({

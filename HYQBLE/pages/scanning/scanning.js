@@ -5,11 +5,13 @@ Page({
 
     //初始化数据
     data: {
-        devices_list:[]
+        devices_list:[],
+        welcome_page:true
     },
 
     //加载页面函数
     onLoad: function(options) {
+
         //读取环境信息
         this.setData({
             sysinfo: appInstance.globalData.sysinfo
@@ -26,10 +28,12 @@ Page({
 
     //监视下拉刷新动作
     onPullDownRefresh: function () {
+        console.log("页面加载成功，触发下拉事件成功")
         var that = this
         //清空列表
         that.setData({
-            devices_list:[]
+            devices_list:[],
+            welcome_page: false
         })
         //关闭蓝牙
         wx.closeBluetoothAdapter({
